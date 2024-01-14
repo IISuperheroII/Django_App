@@ -1,0 +1,14 @@
+{
+    "builds": [{   
+        "src": "expenseswebsite/wsgi.py", 
+        "use": "@now/python",
+        "config": { "maxLambdaSize": "15mb", "runtimes": "Python 3.11.7"}
+        }],
+    "routes": [
+        { 
+        "src": "/(.*)", 
+        "dest": "expenseswebsite/wsgi.py" 
+        }
+    ]
+  }
+  
